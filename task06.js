@@ -8,10 +8,13 @@ const products = [
 
 const calculateTotalPrice = function (allProdcuts, productName) {
   for (const i of allProdcuts) {
-    console.log(i);
+    if (i.name === productName) {
+      return i.price * i.quantity;
+    }
   }
+  return 0;
 };
 console.log(calculateTotalPrice(products, "Радар")); // 5200
-
 console.log(calculateTotalPrice(products, "Дроид")); // 2800
+console.log(calculateTotalPrice(products, "qwerty")); // 0
 console.groupEnd();
