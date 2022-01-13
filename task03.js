@@ -1,17 +1,32 @@
 console.group("Task 3");
-const Storage = function (arg = []){
-    this.arg = arg;
-}
-Storage.prototype.getItems = function () {
-    return this.arg;
-}
-Storage.prototype.addItem = function(item) {
-     return this.arg.push(item);
-}
-Storage.prototype.removeItem = function(item) {
-    const index = this.arg.indexOf(item);
-    if (index > -1 ){
-        return this.arg.splice(index, 1);
+// const Storage = function (arg = []){
+//     this.arg = arg;
+// }
+// Storage.prototype.getItems = function () {
+//     return this.arg;
+// }
+// Storage.prototype.addItem = function(item) {
+//      return this.arg.push(item);
+// }
+// Storage.prototype.removeItem = function(item) {
+//     const index = this.arg.indexOf(item);
+//     if (index > -1 ){
+//         return this.arg.splice(index, 1);
+//     }
+// }
+class Storage {
+    constructor(arg = []) {
+        this.arg = arg;
+    }
+    getItems() {
+        return this.arg;
+    }
+    addItem(item) {
+        return this.arg.push(item);
+    }
+    removeItem(item) {
+        const index = this.arg.indexOf(item);
+        index > - 1 ? this.arg.splice(index, 1) : console.log(`no such "${item}" element`);
     }
 }
 const storage = new Storage([
