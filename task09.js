@@ -1,9 +1,8 @@
 import users from './users.js';
 console.group("Task 9");
 
-const getNamesSortedByFriendsCount = qq => {
-    const qwer = qq.sort((a,b) => a.friends.length > b.friends.length ? 1 : -1);
-    return qwer.map(item => item.name);
+const getNamesSortedByFriendsCount = arr => {
+    return arr.sort((a,b) => a.friends.length > b.friends.length ? 1 : -1).map(({name}) => name);
 }
 
 console.log(getNamesSortedByFriendsCount(users));

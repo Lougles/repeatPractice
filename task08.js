@@ -1,8 +1,7 @@
 import users from './users.js';
 console.group("Task 8");
 const getUsersWithFriend = (arr, friendName) => {
-    const temp = arr.filter(user => user.friends.includes(friendName));
-    return temp.map(user => user.name);
+    return arr.filter(({friends}) => friends.includes(friendName)).map(({name}) => name);
   };
   
   console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]

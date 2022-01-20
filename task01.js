@@ -3,7 +3,7 @@ console.group("Task 1");
 
 
 const getUserNames = arr => {
-  return arr.map(user => user.name);
+  return arr.map(({name}) => name);
 }
 
 console.log(getUserNames(users));
