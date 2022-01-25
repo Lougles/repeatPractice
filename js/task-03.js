@@ -12,3 +12,6 @@
       alt: 'Group of Horses Running',
     },
   ];
+
+
+  
