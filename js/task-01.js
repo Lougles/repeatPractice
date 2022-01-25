@@ -23,5 +23,4 @@ for (const i of qqq){
     console.log(`Категория: ${i.firstElementChild.innerHTML}`);
     console.log(`Количество елементов: ${i.children[1].children.length}`);
 }
-// console.log(qqq);
 console.groupEnd();
