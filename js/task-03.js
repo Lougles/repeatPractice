@@ -12,6 +12,14 @@
       alt: 'Group of Horses Running',
     },
   ];
-
-
-  
+  const ulRef = document.querySelector('#gallery');
+const listOfImg = (url, alt) => {
+  const liItem = document.createElement('li');
+  const img = document.createElement('img');
+  img.src = url;
+  img.alt = alt;
+  liItem.appendChild(img);
+  return liItem;
+}
+const gallImages = images.map(item => listOfImg(item.url, item.alt));
+ulRef.append(...gallImages);
