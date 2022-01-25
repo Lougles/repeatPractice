@@ -16,6 +16,7 @@
 const listOfImg = (url, alt) => {
   const liItem = document.createElement('li');
   const img = document.createElement('img');
+  img.classList.add('lolcalImg');
   img.src = url;
   img.alt = alt;
   liItem.appendChild(img);
